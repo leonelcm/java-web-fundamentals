@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+    <context-param>
+        <param-name>
+            ProductName
+        </param-name>
+        <param-value>
+            Leonel App Context Param
+        </param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>com.leonel.ServletLeonel</servlet-class>
+        <init-param>
+            <param-name>
+                ProductName
+            </param-name>
+            <param-value>
+                Leonel App
+            </param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/other</url-pattern>
+    </servlet-mapping>
+    <!--
+
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/Bar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+-->
+
+
+    <error-page>
+        <location>/errorpage.jsp</location>
+    </error-page>
+</web-app>
